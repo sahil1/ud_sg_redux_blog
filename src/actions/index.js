@@ -38,8 +38,8 @@ export function fetchPost(id) {
 }
 
 export function deletePost(id, callback) {
-  const request = axios.delete(`${ROOT_URL}/posts/${id}${API_KEY}`)
-  .then(() => callback());
+  // eslint-disable-next-line no-use-before-define
+  const request = axios.delete(`${ROOT_URL}/posts/${id}${API_KEY}`).then(() => callback());
 
   return {
     type: DELETE_POST,
