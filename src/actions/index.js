@@ -40,7 +40,7 @@ export function fetchPost(id) {
 export function deletePost(id, callback) {
   // eslint-disable-next-line no-use-before-define
   const request = axios.delete(`${ROOT_URL}/posts/${id}${API_KEY}`).then(() => callback());
-
+  console.log(request);
   return {
     type: DELETE_POST,
     payload: id
